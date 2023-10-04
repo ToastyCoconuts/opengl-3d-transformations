@@ -139,9 +139,9 @@ void problem4() {
     glEnd();
 
     glPushMatrix();
-    //larger triangle offset to create triangular spaces
+    //larger spiral offset to create triangular spaces
     glTranslatef(0.5, 0.5, 0.0);
-    //larger triangle
+    //larger spiral
     glBegin(GL_TRIANGLES);
     glVertex2f(0.0, 0.0);
     glVertex2f(2.0, 0.0);
