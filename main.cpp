@@ -44,19 +44,114 @@ float specular[] = { 1.0, 1.0, 1.0, 1.0 };
 float shininess[] = { 50.0 };
 
 void problem1() {
-    // TODO: Your code here!
+  
+  for(int i = 0; i < 4; i++){ //teapots directly on x and y axis
+    glPushMatrix();
+    if(i%2==0){
+      if(i == 0){
+        glTranslatef(1, 0, 0);
+      }
+      else{
+        glTranslatef(-1, 0, 0);
+      }
+    }
+    else{
+      if(i == 1){
+        glTranslatef(0, 1, 0);
+      }
+      else{
+        glTranslatef(0, -1, 0);
+      }
+    }
+    glRotatef(90*(1+i), 0, 0, 1); //the rotation angles are 90, 180, 270. and 360 respective to i
+    glutSolidTeapot(0.1);
+    glPopMatrix();
+  }
+  
+  for(int i = 0; i < 4; i++){ //teapots in each quadrant
+    glPushMatrix();
+    if(i%2==0){
+      if(i == 0){
+        glTranslatef(0.5, -0.5, 0);
+      }
+      else{
+        glTranslatef(-0.5, 0.5, 0);
+      }
+    }
+    else{
+      if(i == 1){
+        glTranslatef(0.5, 0.5, 0);
+      }
+      else{
+        glTranslatef(-0.5, -0.5, 0);
+      }
+    }    
+    glRotatef(i*(90)+45, 0, 0, 1); //the rotation angles are 45, 135, 225, and 315 respective to i
+    glutSolidTeapot(0.1);
+    glPopMatrix();
+  }
 }
 
 void problem2() {
-    // TODO: Your code here!
+  
+  glEnable(GL_NORMALIZE); //to deal with shadow issue
+  for(int i = 0; i < 12; i++){    
+    for(int j = 0; j <= i; j++){    
+      glPushMatrix();
+      glScalef(0.5*j-(0.5*i), 0.25, 0.5*j-(0.5*i));
+      glTranslatef(0, 0.5*j, 0);
+      glutSolidCube(0.5);
+      glPopMatrix();
+    }
+  }
 }
 
 void problem3() {
-    // TODO: Your code here!
+
+  for(int i = 0;  i < 6; i++){
+    float row = (6 - i - 1) * 0.5;
+    float x = -1.5+ i * 0.3;
+    for(int j = 0; j < 6 - i; j++){
+      glPushMatrix();
+      glTranslatef(x + j * 0.6, -i * 0.45 + 1, 0.0);
+      glutSolidTeapot(0.2);
+      glPopMatrix();
+    }
+  }
 }
 
 void problem4() {
-    // TODO: Your code here!
+  float rotation = 0.0;
+  float currentAngle = 0.0;
+
+  glTranslatef(0.0, 0.0, -5.0);
+  
+  for (int i = 0; i < 20; i++) {
+    glPushMatrix(); 
+      
+    glRotatef(currentAngle + rotation, 0.0, 0.0, 1.0);
+    glTranslatef(1.0, 0.0, 0.0);
+    //smaller spiral
+    glBegin(GL_TRIANGLES);
+    glVertex2f(0.0, 0.0);
+    glVertex2f(1.0, 0.0);
+    glVertex2f(0.0, 1.0);
+    glEnd();
+
+    glPushMatrix();
+    //larger triangle offset to create triangular spaces
+    glTranslatef(0.5, 0.5, 0.0);
+    //larger triangle
+    glBegin(GL_TRIANGLES);
+    glVertex2f(0.0, 0.0);
+    glVertex2f(2.0, 0.0);
+    glVertex2f(0.0, 2.0);
+    glEnd();
+      
+    glPopMatrix(); 
+    glPopMatrix();
+    currentAngle += (360.0/20);
+  }
 }
 
 void display()
