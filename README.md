@@ -15,7 +15,11 @@ Built for COSC 4370 (Computer Graphics) at the University of Houston.
 - `Report.pdf` — Implementation writeup with rendered outputs
 
 ## Output
-![Rotated teapot square](problem1.png)
-![Stepped pyramid](problem2.png)
-![Inverted teapot triangle](problem3.png)
-![Nested triangle spirals](problem4.png)
+### Problem 1 — Rotated Teapot Square
+![Problem 1](problem1.png)
+### Problem 2 — Stepped Pyramid
+![Problem 2](problem2.png)
+### Problem 3 — Inverted Teapot Triangle
+![Problem 3](problem3.png)
+### Problem 4 — Nested Triangle Spirals
+![Problem 4](problem4.png)
