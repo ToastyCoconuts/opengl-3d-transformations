@@ -1,3 +1,15 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/pI7uAJTs)
-# Homework-2
-Name: Samuel Heng , Student ID: 1580496
+# OpenGL 3D Transformations
+
+Recreates four 3D scenes using OpenGL transformation mechanisms: a rotated square of teapots, an 11-step pyramid, an inverted triangle of teapots, and an original nested spiral of triangles.
+
+Built for COSC 4370 (Computer Graphics) at the University of Houston.
+
+## Concepts
+- glTranslatef / glRotatef / glScalef transformations
+- Nested transformation matrices with glPushMatrix / glPopMatrix
+- Procedural scene generation with loops
+- Immediate mode OpenGL rendering
+
+## Files
+- `main.cpp` — Scene construction and transformation logic
+- `Report.pdf` — Implementation writeup with rendered outputs
