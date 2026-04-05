@@ -13,3 +13,9 @@ Built for COSC 4370 (Computer Graphics) at the University of Houston.
 ## Files
 - `main.cpp` — Scene construction and transformation logic
 - `Report.pdf` — Implementation writeup with rendered outputs
+
+## Output
+![Rotated teapot square](problem1.png)
+![Stepped pyramid](problem2.png)
+![Inverted teapot triangle](problem3.png)
+![Nested triangle spirals](problem4.png)
